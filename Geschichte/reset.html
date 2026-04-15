@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset - La isla de los leones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1a6fa8, #e8a44a);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            max-width: 400px;
+        }
+        h1 { color: #1a6fa8; }
+        p { color: #666; }
+        .success { color: #4CAF50; font-weight: bold; }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #1a6fa8;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        a:hover {
+            background: #2a8fc4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✓ Zurückgesetzt!</h1>
+        <p class="success">Alle deine Bewertungen wurden gelöscht.</p>
+        <p>Du kannst jetzt erneut bewerten.</p>
+        <a href="index.html">← Zurück zur Webseite</a>
+    </div>
+
+    <script>
+        localStorage.clear();
+        console.log('✓ localStorage komplett geleert');
+    </script>
+</body>
+</html>

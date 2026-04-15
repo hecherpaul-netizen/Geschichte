@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La isla de los leones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero" style="background-image: url('isla.webp');">
+        <div class="hero-overlay"></div>
+
+        <!-- RATING BADGE (oben links) -->
+        <div class="rating-badge" id="rating-badge">
+            <div class="rating-stars">★★★★★</div>
+            <div class="rating-text"><span id="avg-rating">0.0</span>/5</div>
+        </div>
+
+        <div class="hero-content">
+            <h1>La isla de los leones</h1>
+            <p class="hero-subtitle">Eine Geschichtspräsentation</p>
+        </div>
+        <svg class="wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z" fill="white"></path>
+        </svg>
+    </section>
+
+    <!-- RATING FORM SECTION -->
+    <section class="rating-section">
+        <div class="container">
+            <h2>Wie hat dir die Präsentation gefallen?</h2>
+
+            <div id="rating-form" class="rating-form">
+                <div class="stars" id="stars">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+
+                <div id="message-box" class="message-box" style="display: none;">
+                    <textarea
+                        id="message-textarea"
+                        placeholder="Schreib eine Nachricht (optional)..."
+                        maxlength="50"></textarea>
+                    <button id="submit-btn" class="submit-btn">Absenden</button>
+                    <span id="char-count" class="char-count">0/500</span>
+                </div>
+            </div>
+
+            <div id="thank-you" class="thank-you" style="display: none;">
+                <p>✓ Danke für deine Bewertung!</p>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                Wird gespeichert...
+            </div>
+        </div>
+    </section>
+
+    <!-- MESSAGE WALL SECTION -->
+    <section class="wall-section">
+        <div class="container">
+            <h2>Was andere sagen</h2>
+            <div id="wall" class="wall">
+                <div class="empty-state">
+                    <p>Noch keine Bewertungen. Sei der/die Erste!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team-section">
+        <div class="container">
+            <h2>Unser Team</h2>
+            <div class="team-names">
+                <span class="team-member">Paul</span>
+                <span class="team-member">Alice</span>
+                <span class="team-member">Nico</span>
+                <span class="team-member">Kathi</span>
+                <span class="team-member">Lea</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMIN BUTTON (versteckt unten links) -->
+    <button id="admin-btn" class="admin-btn">⚙️</button>
+
+    <!-- ADMIN MODAL -->
+    <div id="admin-modal" class="admin-modal" style="display: none;">
+        <div class="admin-content">
+            <button id="admin-close" class="admin-close">&times;</button>
+
+            <div id="admin-login" class="admin-section">
+                <h2>Admin Panel</h2>
+                <p>Wähle eine Funktion:</p>
+                <div class="admin-options">
+                    <button id="admin-option-stats" class="admin-option-btn">📊 Statistiken anzeigen</button>
+                    <button id="admin-option-delete" class="admin-option-btn">🗑️ Kommentare löschen</button>
+                    <button id="admin-option-reset" class="admin-option-btn">🔄 Bewertung zurücksetzen</button>
+                </div>
+                <div id="admin-code-section" style="display: none; margin-top: 20px;">
+                    <p>Code eingeben:</p>
+                    <input type="password" id="admin-code" placeholder="Code eingeben..." maxlength="10">
+                    <button id="admin-submit">Zugriff</button>
+                </div>
+            </div>
+
+            <div id="admin-stats-panel" class="admin-section" style="display: none;">
+                <h2>📊 Statistiken</h2>
+                <div id="stats-content" class="stats-content"></div>
+            </div>
+
+            <div id="admin-panel" class="admin-section" style="display: none;">
+                <h2>🗑️ Kommentare löschen</h2>
+                <div id="admin-comments-list" class="admin-comments-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Powered by <span class="heart">❤️</span> • La isla de los leones 2026</p>
+    </footer>
+
+    <!-- App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
